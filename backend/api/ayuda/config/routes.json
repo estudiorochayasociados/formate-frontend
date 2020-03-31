@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ayudas",
+      "handler": "ayuda.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ayudas/count",
+      "handler": "ayuda.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ayudas/:id",
+      "handler": "ayuda.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ayudas",
+      "handler": "ayuda.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ayudas/:id",
+      "handler": "ayuda.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ayudas/:id",
+      "handler": "ayuda.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

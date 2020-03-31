@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "components_clases_capacitacions",
+  "info": {
+    "name": "capacitacion",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "video": {
+      "type": "string"
+    },
+    "multimedia": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

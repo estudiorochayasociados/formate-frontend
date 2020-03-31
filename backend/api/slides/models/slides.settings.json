@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "slides",
+  "info": {
+    "name": "slides"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "slide",
+        "carousel"
+      ],
+      "required": true
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

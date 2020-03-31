@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "ayudas",
+  "info": {
+    "name": "ayuda"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "asunto": {
+      "type": "string"
+    },
+    "respuesta": {
+      "type": "string"
+    },
+    "fecha": {
+      "type": "datetime"
+    },
+    "capacitacion": {
+      "model": "capacitacion"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

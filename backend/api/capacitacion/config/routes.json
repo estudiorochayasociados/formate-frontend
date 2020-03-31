@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/capacitacions",
+      "handler": "capacitacion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/capacitacions/count",
+      "handler": "capacitacion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/capacitacions/:id",
+      "handler": "capacitacion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/capacitacions",
+      "handler": "capacitacion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/capacitacions/:id",
+      "handler": "capacitacion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/capacitacions/:id",
+      "handler": "capacitacion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
