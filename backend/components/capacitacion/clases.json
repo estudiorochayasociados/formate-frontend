@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "components_capacitacion_clases",
+  "info": {
+    "name": "clases",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "video": {
+      "type": "string"
+    },
+    "multimedia": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "slides",
+  "collectionName": "capacitacions",
   "info": {
-    "name": "slides"
+    "name": "capacitacions"
   },
   "options": {
     "increments": true,
@@ -13,18 +13,22 @@
     "titulo": {
       "type": "string"
     },
-    "categoria": {
-      "type": "enumeration",
-      "enum": [
-        "slide",
-        "carousel"
-      ]
+    "descripcion": {
+      "type": "richtext"
     },
-    "imagenes": {
-      "collection": "file",
+    "categoria": {
+      "model": "categorias"
+    },
+    "imagen": {
+      "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "clases": {
+      "type": "component",
+      "repeatable": true,
+      "component": "capacitacion.clases"
     }
   }
 }

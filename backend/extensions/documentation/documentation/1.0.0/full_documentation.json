@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/30/2020 7:18:17 PM"
+    "x-generation-date": "04/01/2020 9:24:01 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,530 +45,19 @@
     }
   ],
   "paths": {
-    "/ayudas": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Ayuda"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Ayuda"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ayuda"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Ayuda"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAyuda"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ayudas/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Ayuda"
-        ],
-        "parameters": []
-      }
-    },
-    "/ayudas/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ayuda"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Ayuda"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Ayuda"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Ayuda"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAyuda"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Ayuda"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
     "/capacitacions": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the capacitacions's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Capacitacion"
+                    "$ref": "#/components/schemas/Capacitacions"
                   }
                 }
               }
@@ -607,7 +96,7 @@
         },
         "summary": "",
         "tags": [
-          "Capacitacion"
+          "Capacitacions"
         ],
         "parameters": [
           {
@@ -750,14 +239,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new capacitacions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Capacitacion"
+                  "$ref": "#/components/schemas/Capacitacions"
                 }
               }
             }
@@ -795,7 +284,7 @@
         },
         "summary": "",
         "tags": [
-          "Capacitacion"
+          "Capacitacions"
         ],
         "requestBody": {
           "description": "",
@@ -803,7 +292,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCapacitacion"
+                "$ref": "#/components/schemas/NewCapacitacions"
               }
             }
           }
@@ -813,10 +302,10 @@
     "/capacitacions/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of capacitacions documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -862,7 +351,7 @@
         },
         "summary": "",
         "tags": [
-          "Capacitacion"
+          "Capacitacions"
         ],
         "parameters": []
       }
@@ -870,14 +359,14 @@
     "/capacitacions/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one capacitacions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Capacitacion"
+                  "$ref": "#/components/schemas/Capacitacions"
                 }
               }
             }
@@ -915,7 +404,7 @@
         },
         "summary": "",
         "tags": [
-          "Capacitacion"
+          "Capacitacions"
         ],
         "parameters": [
           {
@@ -932,14 +421,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single capacitacions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Capacitacion"
+                  "$ref": "#/components/schemas/Capacitacions"
                 }
               }
             }
@@ -977,7 +466,7 @@
         },
         "summary": "",
         "tags": [
-          "Capacitacion"
+          "Capacitacions"
         ],
         "requestBody": {
           "description": "",
@@ -985,7 +474,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCapacitacion"
+                "$ref": "#/components/schemas/NewCapacitacions"
               }
             }
           }
@@ -1005,10 +494,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single capacitacions record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single capacitacions based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -1051,7 +540,7 @@
         },
         "summary": "",
         "tags": [
-          "Capacitacion"
+          "Capacitacions"
         ],
         "parameters": [
           {
@@ -4247,7 +3736,7 @@
   },
   "components": {
     "schemas": {
-      "Ayuda": {
+      "Capacitacions": {
         "required": [
           "id"
         ],
@@ -4255,16 +3744,13 @@
           "id": {
             "type": "string"
           },
-          "asunto": {
+          "titulo": {
             "type": "string"
           },
-          "respuesta": {
+          "descripcion": {
             "type": "string"
           },
-          "fecha": {
-            "type": "datetime"
-          },
-          "capacitacion": {
+          "categoria": {
             "required": [
               "id"
             ],
@@ -4275,99 +3761,13 @@
               "titulo": {
                 "type": "string"
               },
-              "imagen": {
-                "type": "string"
-              },
-              "categoria": {
-                "type": "string"
-              },
-              "clases": {
-                "type": "component"
-              },
               "descripcion": {
                 "type": "string"
-              }
-            }
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
               },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "surname": {
-                "type": "string"
-              },
-              "company": {
-                "type": "string"
-              },
-              "mobile": {
+              "imagen": {
                 "type": "string"
               }
             }
-          }
-        }
-      },
-      "NewAyuda": {
-        "properties": {
-          "asunto": {
-            "type": "string"
-          },
-          "respuesta": {
-            "type": "string"
-          },
-          "fecha": {
-            "type": "datetime"
-          },
-          "capacitacion": {
-            "type": "string"
-          },
-          "user": {
-            "type": "string"
-          }
-        }
-      },
-      "Capacitacion": {
-        "required": [
-          "id"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "titulo": {
-            "type": "string"
           },
           "imagen": {
             "required": [
@@ -4415,25 +3815,6 @@
               }
             }
           },
-          "categoria": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "titulo": {
-                "type": "string"
-              },
-              "descripcion": {
-                "type": "string"
-              },
-              "imagen": {
-                "type": "string"
-              }
-            }
-          },
           "clases": {
             "type": "array",
             "items": {
@@ -4505,17 +3886,17 @@
                 }
               }
             }
-          },
-          "descripcion": {
-            "type": "string"
           }
         }
       },
-      "NewCapacitacion": {
+      "NewCapacitacions": {
         "properties": {
           "titulo": {
             "type": "string"
           },
+          "descripcion": {
+            "type": "string"
+          },
           "categoria": {
             "type": "string"
           },
@@ -4590,9 +3971,6 @@
                 }
               }
             }
-          },
-          "descripcion": {
-            "type": "string"
           }
         }
       },
@@ -4670,10 +4048,7 @@
       },
       "Slides": {
         "required": [
-          "id",
-          "titulo",
-          "categoria",
-          "imagenes"
+          "id"
         ],
         "properties": {
           "id": {
@@ -4741,10 +4116,6 @@
         }
       },
       "NewSlides": {
-        "required": [
-          "titulo",
-          "categoria"
-        ],
         "properties": {
           "titulo": {
             "type": "string"
@@ -5044,10 +4415,7 @@
   },
   "tags": [
     {
-      "name": "Ayuda"
-    },
-    {
-      "name": "Capacitacion"
+      "name": "Capacitacions"
     },
     {
       "name": "Categorias"

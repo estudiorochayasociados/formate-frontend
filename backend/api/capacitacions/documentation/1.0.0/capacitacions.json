@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/slides": {
+    "/capacitacions": {
       "get": {
         "deprecated": false,
-        "description": "Find all the slides's records",
+        "description": "Find all the capacitacions's records",
         "responses": {
           "200": {
-            "description": "Retrieve slides document(s)",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Slides"
+                    "$ref": "#/components/schemas/Capacitacions"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Slides"
+          "Capacitacions"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new slides record",
+        "description": "Create a new capacitacions record",
         "responses": {
           "200": {
-            "description": "Retrieve slides document(s)",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Slides"
+                  "$ref": "#/components/schemas/Capacitacions"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Slides"
+          "Capacitacions"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSlides"
+                "$ref": "#/components/schemas/NewCapacitacions"
               }
             }
           }
         }
       }
     },
-    "/slides/count": {
+    "/capacitacions/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of slides documents",
+        "description": "Retrieve the numver of capacitacions documents",
         "responses": {
           "200": {
-            "description": "Retrieve slides document(s)",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Slides"
+          "Capacitacions"
         ],
         "parameters": []
       }
     },
-    "/slides/{id}": {
+    "/capacitacions/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one slides record",
+        "description": "Find one capacitacions record",
         "responses": {
           "200": {
-            "description": "Retrieve slides document(s)",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Slides"
+                  "$ref": "#/components/schemas/Capacitacions"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Slides"
+          "Capacitacions"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single slides record",
+        "description": "Update a single capacitacions record",
         "responses": {
           "200": {
-            "description": "Retrieve slides document(s)",
+            "description": "Retrieve capacitacions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Slides"
+                  "$ref": "#/components/schemas/Capacitacions"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Slides"
+          "Capacitacions"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSlides"
+                "$ref": "#/components/schemas/NewCapacitacions"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single slides record",
+        "description": "Delete a single capacitacions record",
         "responses": {
           "200": {
-            "description": "deletes a single slides based on the ID supplied",
+            "description": "deletes a single capacitacions based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Slides"
+          "Capacitacions"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Slides": {
+      "Capacitacions": {
         "required": [
           "id"
         ],
@@ -525,75 +525,230 @@
           "titulo": {
             "type": "string"
           },
-          "categoria": {
-            "type": "string",
-            "enum": [
-              "slide",
-              "carousel"
-            ]
+          "descripcion": {
+            "type": "string"
           },
-          "imagenes": {
+          "categoria": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "titulo": {
+                "type": "string"
+              },
+              "descripcion": {
+                "type": "string"
+              },
+              "imagen": {
+                "type": "string"
+              }
+            }
+          },
+          "imagen": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "clases": {
             "type": "array",
             "items": {
+              "type": "object",
               "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
+                "id"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "name": {
+                "titulo": {
                   "type": "string"
                 },
-                "hash": {
+                "descripcion": {
                   "type": "string"
                 },
-                "sha256": {
+                "video": {
                   "type": "string"
                 },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
+                "multimedia": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "sha256": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 }
               }
             }
           }
         }
       },
-      "NewSlides": {
+      "NewCapacitacions": {
         "properties": {
           "titulo": {
             "type": "string"
           },
+          "descripcion": {
+            "type": "string"
+          },
           "categoria": {
-            "type": "string",
-            "enum": [
-              "slide",
-              "carousel"
-            ]
+            "type": "string"
+          },
+          "clases": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "titulo": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "multimedia": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "hash",
+                      "mime",
+                      "size",
+                      "url",
+                      "provider"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "hash": {
+                        "type": "string"
+                      },
+                      "sha256": {
+                        "type": "string"
+                      },
+                      "ext": {
+                        "type": "string"
+                      },
+                      "mime": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "number"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "provider": {
+                        "type": "string"
+                      },
+                      "provider_metadata": {
+                        "type": "object"
+                      },
+                      "related": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -601,7 +756,7 @@
   },
   "tags": [
     {
-      "name": "Slides"
+      "name": "Capacitacions"
     }
   ]
 }
